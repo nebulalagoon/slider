@@ -70,4 +70,28 @@ html {
   background-color: #a1c8f1;
 }
 
+@keyframes slideLeft {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 0px;
+  }
+}
+@keyframes slideRight {
+  from {
+    left: -100px;
+  }
+  to {
+    left: 0px;
+  }
+}
+.slideLeft {
+  animation: slideLeft 0.5s linear 0s 1 forwards;
+}
+
+.slideRight {
+  animation: slideRight 0.5s linear 0s 1 forwards;
+}
+
 /*# sourceMappingURL=slider.css.map */

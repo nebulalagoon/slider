@@ -5,62 +5,54 @@ $(document).ready(()=> {
 
     //slide left
     $('#arrowLeft').on('click', () => {
-        //looping images
+        
+        //row1 adding animation
+        imageRow1.find('img').addClass('slideLeft');
+        setTimeout(() => {
+            imageRow1.find('img').removeClass('slideLeft');
+        }, 500);
+
+        //row 2 adding animation
+        imageRow2.find('img').addClass('slideLeft');
+        setTimeout(() => {
+            imageRow2.find('img').removeClass('slideLeft');
+        }, 500);
+
+        //row1 looping images
         let imgArray1 = imageRow1.find('img').toArray();
         let add1 = imgArray1[0];
         imageRow1.append(add1);
 
+        //row 2 looping images
         let imgArray2 = imageRow2.find('img').toArray();
-        let add2 = imgArray2[0]
+        let add2 = imgArray2[0];
         imageRow2.append(add2);
-
-        //shift the active class
-        imageRow1.find('.active').removeClass('active');
-        imageRow1.find('img').last().addClass('active');
-
-        imageRow2.find('.active').removeClass('active');
-        imageRow2.find('img').last().addClass('active');
-
-        //animation
-        /*let widthRow1 = imageRow1.find('.active').innerWidth();
-        let toRow1={'right': '+=' + widthRow1 + 'px'};
-        imageRow1.find('img').animate(toRow1);
-
-        let widthRow2 = imageRow2.find('.active').innerWidth();
-        let toRow2={'right': '+=' + widthRow2 + 'px'};
-        imageRow2.find('img').animate(toRow2);*/
-        
         }
     );
 
     //slide right
     $('#arrowRight').on('click', () => {
 
-        //looping trough images
+        //row 1 adding animation
+        imageRow1.find('img').addClass('slideRight');
+        setTimeout(() => {
+            imageRow1.find('img').removeClass('slideRight');
+        }, 500);
+
+        //row 2 adding animation
+        imageRow2.find('img').addClass('slideRight'); 
+        setTimeout(() => {
+            imageRow2.find('img').removeClass('slideRight');
+        }, 500); 
+
+        //row 1 looping trough images
         let imgArray1 = imageRow1.find('img').toArray();
         let add1 = imgArray1.pop();
         imageRow1.prepend(add1);
 
+        //row 2 looping trough images
         let imgArray2 = imageRow2.find('img').toArray();
         let add2 = imgArray2.pop();
         imageRow2.prepend(add2);
-
-        
-        //shift the active class
-        imageRow1.find('.active').removeClass('active');
-        imageRow1.find('img').last().addClass('active');
-
-        imageRow2.find('.active').removeClass('active');
-        imageRow2.find('img').last().addClass('active');
-        
-        //animation
-        /*let widthRow1 = imageRow1.find('.active').innerWidth();
-        let toRow1={'right': '-=' + widthRow1 + 'px'};
-        imageRow1.find('img').animate(toRow1);
-
-        let widthRow2 = imageRow2.find('.active').innerWidth();
-        let toRow2={'right': '-=' + widthRow2 + 'px'};
-        imageRow2.find('img').animate(toRow2);*/
-        
     });
 });
