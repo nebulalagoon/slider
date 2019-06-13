@@ -1,0 +1,70 @@
+//colors
+
+$dark-blue: #134880
+    
+//position and sizing
+    
+html 
+    box-sizing: border-box
+
+#slider
+    margin-top: 100px
+    display: grid
+    grid-template-columns: 3fr 1fr
+    grid-template-rows: 412px
+    grid-column-gap: 45px
+
+#container
+    display: grid
+    grid-template-rows: 210px 210px
+    
+    .imageRow 
+        display: flex
+        flex-flow: row nowrap
+        justify-content: flex-end
+        overflow-x: hidden
+        > img 
+            flex: 0 1 auto
+            height: 200px
+            margin: 5px
+            max-width: 100%
+
+    
+    #row2
+        display: grid
+        grid-template-columns: 1fr 45px
+        grid-column-gap: 20px
+    
+    #arrows 
+        display: inline-block
+        img
+            padding: 19px 22px
+            display: block
+            margin-top: 10px
+
+
+//colors and styles
+
+html
+    font-family: "Arial", sans-serif
+
+#description 
+    h1
+        color: $dark-blue
+        font-size: 2rem
+        font-weight: bold
+
+    p 
+        font-size: 1rem
+        color: #191919
+
+#container img
+    border-radius: 5px
+
+#arrows img
+    border-style: solid
+    border-color: $dark-blue
+    border-width: 1px
+
+#arrows img:active
+    background-color: lighten($dark-blue, 50%)
