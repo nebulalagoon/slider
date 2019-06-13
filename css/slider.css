@@ -6,7 +6,7 @@ html {
   margin-top: 100px;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 412px;
+  grid-template-rows: 420px;
   grid-column-gap: 45px;
 }
 
@@ -18,6 +18,7 @@ html {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+  z-index: -10;
   overflow-x: hidden;
 }
 #container .imageRow > img {
@@ -25,6 +26,7 @@ html {
   height: 200px;
   margin: 5px;
   max-width: 100%;
+  position: relative;
 }
 #container #row2 {
   display: grid;
