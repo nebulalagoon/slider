@@ -2,12 +2,13 @@
 
 $dark-blue: #134880
 $light-gray: #DDDDDD
+$dark-gray: #484A4C
 
 //sizes
 $image-height: 200px
 $header-height: 100px
     
-//position and sizing
+//position and sizing - CSS grid
     
 html 
     box-sizing: border-box
@@ -16,12 +17,14 @@ body
     margin: 0px
 
 #outerContainer
-    
     display: grid
     grid-template-rows: $header-height 410px $header-height
     grid-row-gap: 60px
+    grid-template-columns: 1fr 940px 1fr
+    grid-template-areas: ". header ." "slider slider ." ". footer ."
 
 header
+    grid-area: header
     width: 940px
     margin: 0px auto
     display: grid
@@ -29,10 +32,12 @@ header
     grid-column-gap: 20px
 
 footer 
+    grid-area: footer
     width: 940px
     margin: 0px auto
 
 #slider
+    grid-area: slider
     align-self: middle
     display: grid
     grid-template-columns: 1fr 300px
@@ -68,10 +73,10 @@ footer
         
 
 
-//colors and styles
+//colors and styles and minor positioning adjustments
 
 html
-    font-family: "Arial", sans-serif
+    font-family: "Fira Sans", "Arial", sans-serif
 
 header div, footer div
     background-color: $light-gray
@@ -98,14 +103,17 @@ footer div
         margin: 0px 80px
 
 #description 
-    h1
+    h1 
+        margin-top: 0px
         color: $dark-blue
-        font-size: 2rem
+        font-size: 1.8rem
         font-weight: bold
+        line-height: 40px
 
     p 
         font-size: 1rem
-        color: #191919
+        color: $dark-gray
+        line-height: 30px
 
 #container img
     border-radius: 5px
@@ -117,7 +125,9 @@ footer div
     border-radius: 5px
 
 #arrowLeft
-    margin: 0px auto
+    margin-top: 0px
+    margin-right: 0px
+    margin-left: auto
     background-image: url('../Assets/arrow-gray-left.png')
     background-repeat: no-repeat
     background-position: center
@@ -125,7 +135,9 @@ footer div
     width: 60px
 
 #arrowRight
-    margin: 10px auto
+    margin-top: 10px
+    margin-right: 0px
+    margin-left: auto
     background-image: url('../Assets/arrow-gray-right.png')
     background-repeat: no-repeat
     background-position: center
