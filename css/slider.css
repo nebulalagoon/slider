@@ -2,17 +2,41 @@ html {
   box-sizing: border-box;
 }
 
-#slider {
-  margin-top: 100px;
+body {
+  margin: 0px;
+}
+
+#outerContainer {
   display: grid;
-  grid-template-columns: 3fr 320px;
-  grid-template-rows: 420px;
-  grid-column-gap: 45px;
+  grid-template-rows: 100px 410px 100px;
+  grid-row-gap: 60px;
+}
+
+header {
+  width: 940px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 300px 620px;
+  grid-column-gap: 20px;
+}
+
+footer {
+  width: 940px;
+  margin: 0px auto;
+}
+
+#slider {
+  align-self: middle;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  grid-template-rows: calc(2*$image-height);
+  grid-column-gap: 20px;
 }
 
 #container {
   display: grid;
-  grid-template-rows: 210px 210px;
+  grid-template-rows: 200px 200px;
+  grid-row-gap: 10px;
 }
 #container .imageRow {
   display: flex;
@@ -24,26 +48,49 @@ html {
 #container .imageRow > img {
   flex: 0 1 auto;
   height: 200px;
-  margin: 5px;
+  margin-left: 10px;
   max-width: 100%;
-  position: absolute;
 }
 #container #row2 {
   display: grid;
-  grid-template-columns: 1fr 45px;
-  grid-column-gap: 20px;
+  grid-template-columns: 1fr 80px;
+  grid-column-gap: 100px;
 }
 #container #arrows {
   display: inline-block;
 }
-#container #arrows img {
-  padding: 19px 22px;
-  display: block;
-  margin-top: 10px;
-}
 
 html {
   font-family: "Arial", sans-serif;
+}
+
+header div, footer div {
+  background-color: #DDDDDD;
+  color: white;
+  height: 100px;
+}
+
+header div {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+header div p {
+  line-height: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px 80px;
+}
+
+footer div {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  height: 100px;
+}
+footer div p {
+  line-height: 100px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px 80px;
 }
 
 #description h1 {
@@ -60,14 +107,39 @@ html {
   border-radius: 5px;
 }
 
-#arrows img {
+#arrows div {
   border-style: solid;
-  border-color: #134880;
+  border-color: #DDDDDD;
   border-width: 1px;
+  border-radius: 5px;
 }
 
-#arrows img:active {
-  background-color: #a1c8f1;
+#arrowLeft {
+  margin: 0px auto;
+  background-image: url("../Assets/arrow-gray-left.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60px;
+  width: 60px;
+}
+
+#arrowRight {
+  margin: 10px auto;
+  background-image: url("../Assets/arrow-gray-right.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60px;
+  width: 60px;
+}
+
+#arrowLeft:hover, #arrowLeft:active {
+  background-image: url("../Assets/arrow-blue-left.png");
+  border-color: #134880;
+}
+
+#arrowRight:hover, #arrowRight:active {
+  background-image: url("../Assets/arrow-blue-right.png");
+  border-color: #134880;
 }
 
 /*# sourceMappingURL=slider.css.map */

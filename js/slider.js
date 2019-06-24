@@ -5,14 +5,14 @@ $(document).ready(()=> {
     const $imageRow2 = $('#row2').find('.imageRow');
 
     //images initial setup
-    let position0Row1 = 340;
+    let position0Row1 = 0;
         
     for (let i=$imageRow1.find('img').length-1; i>=0; i--) {
         moveLeft($imageRow1.find('img')[i], position0Row1); 
         position0Row1 += ($imageRow1.find('img')[i].clientWidth + 10);
     };
 
-    let position0Row2 = 430;
+    let position0Row2 = 0;
         
     for (let i=$imageRow2.find('img').length-1; i>=0; i--) {
         moveLeft($imageRow2.find('img')[i], position0Row2); 
@@ -28,7 +28,7 @@ $(document).ready(()=> {
         const imageArray2 = $imageRow2.find('img').toArray();
 
         //slide row 1
-        let position1 = widthRow1 + 350;
+        let position1 = widthRow1;
         
         for (let i=$imageRow1.find('img').length-1; i>0; i--) {
             moveLeft($imageRow1.find('img')[i], position1); 
@@ -36,7 +36,7 @@ $(document).ready(()=> {
         }
 
         //slide row 2
-        let position2 = widthRow2 + 440;
+        let position2 = widthRow2;
         
         for (let i=$imageRow2.find('img').length-1; i>0; i--) {
             moveLeft($imageRow2.find('img')[i], position2); 
