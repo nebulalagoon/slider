@@ -55,6 +55,7 @@ footer {
   height: 200px;
   margin-left: 10px;
   max-width: 100%;
+  position: absolute;
 }
 #container #row2 {
   display: grid;
@@ -126,7 +127,7 @@ footer div p {
   margin-top: 0px;
   margin-right: 0px;
   margin-left: auto;
-  background-image: url("../Assets/arrow-gray-left.png");
+  background-image: url("../Assets/arrows/arrow-gray-left.png");
   background-repeat: no-repeat;
   background-position: center;
   height: 60px;
@@ -137,7 +138,7 @@ footer div p {
   margin-top: 10px;
   margin-right: 0px;
   margin-left: auto;
-  background-image: url("../Assets/arrow-gray-right.png");
+  background-image: url("../Assets/arrows/arrow-gray-right.png");
   background-repeat: no-repeat;
   background-position: center;
   height: 60px;
@@ -145,12 +146,12 @@ footer div p {
 }
 
 #arrowLeft:hover, #arrowLeft:active {
-  background-image: url("../Assets/arrow-blue-left.png");
+  background-image: url("../Assets/arrows/arrow-blue-left.png");
   border-color: #134880;
 }
 
 #arrowRight:hover, #arrowRight:active {
-  background-image: url("../Assets/arrow-blue-right.png");
+  background-image: url("../Assets/arrows/arrow-blue-right.png");
   border-color: #134880;
 }
 
