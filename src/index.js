@@ -1,14 +1,16 @@
+import '../css/slider.sass';
+
 $(document).ready(()=> {
 
     //loading images - this should be done with an ajax request on the server
     const imgNum = 9; //number of images
 
     for (let i = 1; i<=(imgNum/2 + 1); i++) { //row 1 load images
-        $('#row1').append(`<img src="Assets/slider-images/slider-image-${i}.jpg" style="position: absolute"/>`); 
+        $('#row1').append(`<img src="Assets/slider-images/slider-image-${i}.jpg"/>`); 
     }
 
     for (let i = Math.floor(imgNum/2 + 2); i<=imgNum; i++) { //row 2 load images
-        $('#row2').append(`<img src="Assets/slider-images/slider-image-${i}.jpg" style="position: absolute"/>`); 
+        $('#row2').append(`<img src="Assets/slider-images/slider-image-${i}.jpg"/>`); 
     }
 
     //variables
@@ -46,7 +48,6 @@ $(document).ready(()=> {
 
 
         //slide row 1
-        $imageRow1.find('img').css('position', 'absolute');
         let position1 = widthRow1 + (viewportWidth - ($("#description").offset().left - 30));
         
         for (let i=$imageRow1.find('img').length-1; i>0; i--) {  
@@ -55,7 +56,6 @@ $(document).ready(()=> {
         }
 
         //slide row 2
-        $imageRow2.find('img').css('position', 'absolute');
         let position2 = widthRow2 + (viewportWidth - ($("#description").offset().left - 190));
         
         for (let i=$imageRow2.find('img').length-1; i>0; i--) {
@@ -83,7 +83,6 @@ $(document).ready(()=> {
         const imageArray2 = $imageRow2.find('img').toArray();
 
         //slide row1
-        $imageRow1.find('img').css('position', 'absolute');
         let position1 = viewportWidth - ($("#description").offset().left - 30);
 
         for (let i=0; i<$imageRow1.find('img').length; i++) {
@@ -91,7 +90,6 @@ $(document).ready(()=> {
         }
 
         //slide Row2
-        $imageRow2.find('img').css('position', 'absolute');
         let position2 = viewportWidth - ($("#description").offset().left - 190);
 
         for (let i=0; i<$imageRow2.find('img').length; i++) {
