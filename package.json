@@ -1,0 +1,20 @@
+{
+  "name": "slider",
+  "version": "1.0.0",
+  "description": "image slider",
+  "main": "slider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nebulalagoon/slider.git"
+  },
+  "author": "Marta Henc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nebulalagoon/slider/issues"
+  },
+  "homepage": "https://github.com/nebulalagoon/slider#readme",
+  "dependencies": {}
+}
